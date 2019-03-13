@@ -59,13 +59,6 @@ namespace RsaAlgorithms
             var cypherText = Convert.ToBase64String(bytesCypherText);
             Console.WriteLine("encrypted message: " + cypherText);
 
-
-            /*
-             * some transmission / storage / retrieval
-             * 
-             * and we want to decrypt our cypherText
-             */
-
             //first, get our bytes back from the base64 string ...
             bytesCypherText = Convert.FromBase64String(cypherText);
 
