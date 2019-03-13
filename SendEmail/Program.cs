@@ -16,8 +16,7 @@ namespace SendEmail
             string subject = Console.ReadLine();
             Console.Write("message: ");
             string message = Console.ReadLine();
-            
-            if(EmailSender.SendEmail(email, emailPass, to, subject, message))
+            if (EmailSender.SendEmail(email, emailPass, to, subject, message))
             {
                 Console.WriteLine("Send email complete!");
             }
