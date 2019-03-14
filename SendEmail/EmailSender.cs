@@ -25,7 +25,7 @@ namespace SendEmail
                 smtpClient.Credentials = loginInfo;
                 smtpClient.Send(msg);
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
