@@ -11,9 +11,8 @@ Sử dụng giải thuật RSA cho mã hoá một thông điệp (message).
 ## Send email
 Sử dụng để gửi email sử dụng Gmail.
 ### Cách tắt tính năng bảo mật ứng dụng trong Gmail
-Muốn gửi được email với demo này thì phải tắt tính năng bảo mật ứng dụng trong gmail<br/>
-Đăng nhập vào tài khoản gmail
-
+Muốn gửi được email với demo này thì phải tắt tính năng bảo mật ứng dụng trong gmail.<br/>
+Làm the hướng dẫn tại link sau: https://support.google.com/accounts/answer/6010255?hl=vi
 ## License
 Copyright (c) 2019 SinhNX <sinhnx.dev@gmail.com>
 Licensed under the MIT license.
