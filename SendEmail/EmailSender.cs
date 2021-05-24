@@ -20,13 +20,14 @@ namespace SendEmail
                 msg.Body = message;
                 msg.IsBodyHtml = true;
 
-                smtpClient.EnableSsl = true;
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = loginInfo;
+                smtpClient.EnableSsl = true;
                 smtpClient.Send(msg);
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 return false;
             }
             return true;

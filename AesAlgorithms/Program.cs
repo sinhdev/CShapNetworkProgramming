@@ -10,10 +10,10 @@ namespace AesAlgorithms
         public static class Global
         {
             // set password
-            public const string strPassword = "LetMeIn99$";
+            public const string strPassword = "sinhnx.dev";
 
             // set permutations
-            public const String strPermutation = "ouiveyxaqtd";
+            public const String strPermutation = "thisispermutations";
             public const Int32 bytePermutation1 = 0x19;
             public const Int32 bytePermutation2 = 0x59;
             public const Int32 bytePermutation3 = 0x17;
