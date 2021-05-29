@@ -85,7 +85,6 @@ namespace DesAlgorithms
             }
 
         }
-
         public static string DecryptTextFromMemory(byte[] Data, byte[] Key, byte[] IV)
         {
             try

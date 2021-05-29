@@ -9,30 +9,23 @@ namespace AesAlgorithms
     {
         public static class Global
         {
-            // set password
-            public const string strPassword = "sinhnx.dev";
-
-            // set permutations
-            public const String strPermutation = "thisispermutations";
-            public const Int32 bytePermutation1 = 0x19;
-            public const Int32 bytePermutation2 = 0x59;
-            public const Int32 bytePermutation3 = 0x17;
-            public const Int32 bytePermutation4 = 0x41;
+            public const String STRING_PERMUTATION = "sinhnx.dev";
+            public const Int32 BYTE_PERMUTATION_1 = 0x19;
+            public const Int32 BYTE_PERMUTATION_2 = 0x59;
+            public const Int32 BYTE_PERMUTATION_3 = 0x17;
+            public const Int32 BYTE_PERMUTATION_4 = 0x41;
         }
-
-
-        // The console window
         public static void Main(String[] args)
         {
-            Console.Title = "Secure Password v2";
+            // input a string to encrypt.
+            Console.Write("input a message: ");
+            string msg = Console.ReadLine();
 
-            Console.WriteLine("Password:  " + Global.strPassword);
-
-            string strEncrypted = (Encrypt(Global.strPassword));
-            Console.WriteLine("Encrypted: " + strEncrypted);
+            string strEncrypted = (Encrypt(msg));
+            Console.WriteLine("encrypted message: " + strEncrypted);
 
             string strDecrypted = (Decrypt(strEncrypted));
-            Console.WriteLine("Decrypted: " + strDecrypted);
+            Console.WriteLine("decrypted message: " + strDecrypted);
         }
         // encoding
         public static string Encrypt(string strData)
@@ -48,11 +41,11 @@ namespace AesAlgorithms
         public static byte[] Encrypt(byte[] strData)
         {
             PasswordDeriveBytes passbytes =
-            new PasswordDeriveBytes(Global.strPermutation,
-            new byte[] { Global.bytePermutation1,
-                         Global.bytePermutation2,
-                         Global.bytePermutation3,
-                         Global.bytePermutation4
+            new PasswordDeriveBytes(Global.STRING_PERMUTATION,
+            new byte[] { Global.BYTE_PERMUTATION_1,
+                         Global.BYTE_PERMUTATION_2,
+                         Global.BYTE_PERMUTATION_3,
+                         Global.BYTE_PERMUTATION_4
             });
 
             MemoryStream memstream = new MemoryStream();
@@ -71,11 +64,11 @@ namespace AesAlgorithms
         public static byte[] Decrypt(byte[] strData)
         {
             PasswordDeriveBytes passbytes =
-            new PasswordDeriveBytes(Global.strPermutation,
-            new byte[] { Global.bytePermutation1,
-                         Global.bytePermutation2,
-                         Global.bytePermutation3,
-                         Global.bytePermutation4
+            new PasswordDeriveBytes(Global.STRING_PERMUTATION,
+            new byte[] { Global.BYTE_PERMUTATION_1,
+                         Global.BYTE_PERMUTATION_2,
+                         Global.BYTE_PERMUTATION_3,
+                         Global.BYTE_PERMUTATION_4
             });
 
             MemoryStream memstream = new MemoryStream();
