@@ -17,12 +17,12 @@ namespace SimpleTcpClient
             Console.Write("Your name: ");
             string name = Console.ReadLine();
             //4. Send data
-            byte[] data = Encoding.ASCII.GetBytes(name);
+            byte[] data = Encoding.UTF8.GetBytes(name);
             stream.Write(data, 0, data.Length);
             //5. Receive Data
             byte[] dataReceive = new byte[1024];
             stream.Read(dataReceive, 0, 1024);
-            Console.WriteLine("Server return: \"" + Encoding.ASCII.GetString(dataReceive) + "\"");
+            Console.WriteLine("Server return: \"" + Encoding.UTF8.GetString(dataReceive) + "\"");
             //6. Close
             stream.Close();
             client.Close();
